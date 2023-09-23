@@ -1,7 +1,11 @@
 # ALAn
-Automated Layer Analysis (ALAn) is first introduced in Dawney NS*, Cammarota C*, Jia Q, Shipley A, Glichowski JA, Vasandani M, Finegan TM, Bergstralh DT. A novel tool for the unbiased characterization of epithelial monolayer development in culture. Mol Biol Cell. 2023 Apr 1;34(4):ar25 (* denotes equal contribution). The tool was further developed with work published in Cammarota C, Dawney NS, Bellomio PM, Jüng M, Fletcher AG, Finegan TM, Bergstralh DT. The Mechanical Influence of Densification on Initial Epithelial Architecture. bioRxiv 2023.05.07.539758; doi: https://doi.org/10.1101/2023.05.07.539758.
+Automated Layer Analysis (ALAn) is an image analysis tool that provides a quantiative, unbiased characterization of the architecture of epithelial layers. The tool has been optimized for the analysis of Mardin-Darby Canine Kidney cells grown in culture, fixed, and stained with fluorescent dyes marking F-Actin and DNA. ALAn is written in Python using Jupyter Notebooks for user ease.
 
-ALAn is written as a set of functions in python, which we run in a jupyter notebook. This read-me will include a list of each function, with all inputs and outputs as well as a brief mention of where things will be saved or requirements for locations to read in files if necessary. ALAn is to be used with 4D confocal stacks (xyz, multichannel images saved with a 512 by 512 ) in conjunction with a spreadsheet of segmented nuclear positions and sizes (xyz positions, volume in µm3­, and reference positions). 
+ALAn is introduced in Dawney NS*, Cammarota C*, Jia Q, Shipley A, Glichowski JA, Vasandani M, Finegan TM, Bergstralh DT. A novel tool for the unbiased characterization of epithelial monolayer development in culture. Mol Biol Cell. 2023 Apr 1;34(4):ar25  doi: https://doi.org/10.1091/mbc.E22-04-0121 (* denotes equal contribution). The tool was further developed in Cammarota C, Dawney NS, Bellomio PM, Jüng M, Fletcher AG, Finegan TM, Bergstralh DT. The Mechanical Influence of Densification on Initial Epithelial Architecture. bioRxiv 2023.05.07.539758; doi: https://doi.org/10.1101/2023.05.07.539758.
+
+A detailed protocol is currently submitted at Bioprotocols.
+
+This read-me includes a list of each function, with all inputs and outputs as well as a brief mention of where things will be saved or requirements for locations to read in files if necessary. ALAn is to be used with 4D confocal stacks (xyz, multichannel images saved with a 512 by 512 ) in conjunction with a spreadsheet of segmented nuclear positions and sizes (xyz positions, volume in µm3­, and reference positions). 
  
 The starting code block in the ALAn notebook provides a quick way to read your files into the workspace. To use this portion, you will need to name associated image and spreadsheet files the same, up to the extension (.tif or .csv). By changing the path in line 3 to file path for your images (.tif format) and spreadsheets (.csv format), this block will output three lists (list of names, list of dfs, and list of unshuffled images) which correspond to file names, spreadsheets as pandas dataframes, and images as array objects. The positions of each name/spreadsheet/image in these lists will be identical for your images. Any image without an associated spreadsheet, or vice versa, will be left out of the described lists and can instead be found in the unmatched images or unmatched spreadsheets lists.
  
@@ -220,4 +224,4 @@ o invert: boolean, optional – Option to invert the z slices of an image if the
 OUTPUTS:
 o analyzed_df: pandas DataFrame – DataFrame consisting of columns: image_name, layer_classifications, cells_in_layer, cells_above_layer, total_cells, cell_density, layer_height, percent_above, average_cell_area, average_cell_perimeter, average_cell_circularity, equivalences (Lateral-to-Apical shape index), derivative_peak_rule (True if No Shoulder). 
 
-
+This readme was written by Drs Christian Cammarota and Tara M Finegan in September 2023.
