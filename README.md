@@ -3,7 +3,7 @@ Automated Layer Analysis (ALAn) is an image analysis tool that provides a quanti
 
 ALAn is introduced in Dawney NS*, Cammarota C*, Jia Q, Shipley A, Glichowski JA, Vasandani M, Finegan TM, Bergstralh DT. A novel tool for the unbiased characterization of epithelial monolayer development in culture. Mol Biol Cell. 2023 Apr 1;34(4):ar25  doi: https://doi.org/10.1091/mbc.E22-04-0121 (* denotes equal contribution). The tool was further developed in Cammarota C, Dawney NS, Bellomio PM, Jüng M, Fletcher AG, Finegan TM, Bergstralh DT. The Mechanical Influence of Densification on Initial Epithelial Architecture. bioRxiv 2023.05.07.539758; doi: https://doi.org/10.1101/2023.05.07.539758.
 
-A detailed protocol is currently submitted at Bioprotocols.
+A detailed protocol is currently submitted at Bioprotocols. Example datasets can be downloaded from: https://mailmissouri-my.sharepoint.com/:f:/g/personal/tmfhdb_umsystem_edu/EsETAvroQ7BLhZEbFpNE-fEBxR8AdpvZuVMseUwO8Y1KzA?e=lB2y7b
 
 This read-me includes a list of each function, with all inputs and outputs as well as a brief mention of where things will be saved or requirements for locations to read in files if necessary. ALAn is to be used with 4D confocal stacks (xyz, multichannel images saved with a 512 by 512 ) in conjunction with a spreadsheet of segmented nuclear positions and sizes (xyz positions, volume in µm3­, and reference positions). 
  
